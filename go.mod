@@ -3,6 +3,7 @@ module terraform-provider-pihole
 go 1.19
 
 require (
+	github.com/NicoFgrx/pihole-api-go v0.1.0
 	github.com/hashicorp/terraform-plugin-docs v0.16.0
 	github.com/hashicorp/terraform-plugin-framework v1.3.3
 	github.com/hashicorp/terraform-plugin-go v0.18.0
@@ -13,7 +14,6 @@ require (
 	github.com/Masterminds/goutils v1.1.1 // indirect
 	github.com/Masterminds/semver/v3 v3.1.1 // indirect
 	github.com/Masterminds/sprig/v3 v3.2.2 // indirect
-	github.com/NicoFgrx/pihole-api-go v0.1.0 // indirect
 	github.com/ProtonMail/go-crypto v0.0.0-20230217124315-7d5c6f04bbb8 // indirect
 	github.com/apparentlymart/go-textseg/v13 v13.0.0 // indirect
 	github.com/armon/go-radix v1.0.0 // indirect
