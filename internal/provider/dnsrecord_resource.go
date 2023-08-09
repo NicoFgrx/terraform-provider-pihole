@@ -11,6 +11,8 @@ import (
 	"github.com/hashicorp/terraform-plugin-framework/path"
 	"github.com/hashicorp/terraform-plugin-framework/resource"
 	"github.com/hashicorp/terraform-plugin-framework/resource/schema"
+	"github.com/hashicorp/terraform-plugin-framework/resource/schema/planmodifier"
+	"github.com/hashicorp/terraform-plugin-framework/resource/schema/stringplanmodifier"
 	"github.com/hashicorp/terraform-plugin-framework/types"
 	"github.com/hashicorp/terraform-plugin-log/tflog"
 )
@@ -54,6 +56,9 @@ func (r *dnsrecordResource) Schema(_ context.Context, _ resource.SchemaRequest, 
 			"id": schema.StringAttribute{
 				Description: "Same as Domain attribute",
 				Computed:    true,
+				PlanModifiers: []planmodifier.String{
+					stringplanmodifier.UseStateForUnknown(),
+				},
 			},
 			"last_updated": schema.StringAttribute{
 				Description: "Timestamp of the last Terraform update of the dns record.",
@@ -169,14 +174,6 @@ func (r *dnsrecordResource) Read(ctx context.Context, req resource.ReadRequest, 
 }
 
 func (r *dnsrecordResource) Update(ctx context.Context, req resource.UpdateRequest, resp *resource.UpdateResponse) {
-	// Get current state
-	var state dnsRecordResourceModel
-	diags_state := req.State.Get(ctx, &state)
-	resp.Diagnostics.Append(diags_state...)
-	if resp.Diagnostics.HasError() {
-		return
-	}
-
 	// Retrieve values from plan
 	var plan dnsRecordResourceModel
 	diags_plan := req.Plan.Get(ctx, &plan)
@@ -192,8 +189,7 @@ func (r *dnsrecordResource) Update(ctx context.Context, req resource.UpdateReque
 	}
 
 	// Update existing record
-	old := state.ID.ValueString()
-	err := r.client.UpdateCustomDNS(old, &new)
+	err := r.client.UpdateCustomDNS(plan.ID.ValueString(), &new)
 	if err != nil {
 		resp.Diagnostics.AddError(
 			"Error Updating pihole dns record",
