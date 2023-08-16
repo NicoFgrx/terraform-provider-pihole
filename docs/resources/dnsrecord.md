@@ -22,5 +22,4 @@ DNS Record resource for pihole
 
 ### Read-Only
 
-- `id` (String) Same as Domain attribute
 - `last_updated` (String) Timestamp of the last Terraform update of the dns record.
