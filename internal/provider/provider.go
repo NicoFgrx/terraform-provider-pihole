@@ -158,5 +158,6 @@ func (p *piholeProvider) DataSources(_ context.Context) []func() datasource.Data
 func (p *piholeProvider) Resources(_ context.Context) []func() resource.Resource {
 	return []func() resource.Resource{
 		NewDnsRecordResource,
+		NewCnameResource,
 	}
 }

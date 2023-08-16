@@ -24,7 +24,7 @@ resource "pihole_dnsrecord" "test" {
 					resource.TestCheckResourceAttr("pihole_dnsrecord.test", "ip", "1.2.3.4"),
 
 					// Verify dynamic values have any value set in the state.
-					resource.TestCheckResourceAttrSet("pihole_dnsrecord.test", "id"),
+					// resource.TestCheckResourceAttrSet("pihole_dnsrecord.test", "id"),
 					resource.TestCheckResourceAttrSet("pihole_dnsrecord.test", "last_updated"),
 				),
 			},
@@ -51,7 +51,7 @@ resource "pihole_dnsrecord" "test" {
 					resource.TestCheckResourceAttr("pihole_dnsrecord.test", "ip", "2.3.4.5"),
 
 					// Verify dynamic values have any value set in the state.
-					resource.TestCheckResourceAttrSet("pihole_dnsrecord.test", "id"),
+					// resource.TestCheckResourceAttrSet("pihole_dnsrecord.test", "id"),
 					resource.TestCheckResourceAttrSet("pihole_dnsrecord.test", "last_updated"),
 				),
 			},

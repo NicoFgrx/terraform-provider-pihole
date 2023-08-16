@@ -18,6 +18,8 @@ github.com/NicoFgrx/pihole-api-go v0.3.2 h1:LV/v6cvmdCrNIYhfNUL2G21Ok93VIfM9C6p7
 github.com/NicoFgrx/pihole-api-go v0.3.2/go.mod h1:TAEVXr4Ug4zNN4/yrFE04R5wE4cw+UAIg63gqeX/V30=
 github.com/NicoFgrx/pihole-api-go v0.3.3 h1:SVAm0QZn1P+Lyntr79U0SLxUyJiq4c4prB7VJlGypbs=
 github.com/NicoFgrx/pihole-api-go v0.3.3/go.mod h1:TAEVXr4Ug4zNN4/yrFE04R5wE4cw+UAIg63gqeX/V30=
+github.com/NicoFgrx/pihole-api-go v0.6.1 h1:9gfuRuIWNIXM0hb746q6TVoBiTp2aXsprKeGUnm4yVw=
+github.com/NicoFgrx/pihole-api-go v0.6.1/go.mod h1:TAEVXr4Ug4zNN4/yrFE04R5wE4cw+UAIg63gqeX/V30=
 github.com/ProtonMail/go-crypto v0.0.0-20230217124315-7d5c6f04bbb8 h1:wPbRQzjjwFc0ih8puEVAOFGELsn1zoIIYdxvML7mDxA=
 github.com/ProtonMail/go-crypto v0.0.0-20230217124315-7d5c6f04bbb8/go.mod h1:I0gYDMZ6Z5GRU7l58bNFSkPTFN6Yl12dsUlAZ8xy98g=
 github.com/acomagu/bufpipe v1.0.4 h1:e3H4WUzM3npvo5uv95QuJM3cQspFNtFBzvJ2oNjKIDQ=

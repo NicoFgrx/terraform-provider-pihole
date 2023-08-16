@@ -3,7 +3,7 @@ module terraform-provider-pihole
 go 1.19
 
 require (
-	github.com/NicoFgrx/pihole-api-go v0.3.3
+	github.com/NicoFgrx/pihole-api-go v0.6.1
 	github.com/hashicorp/terraform-plugin-docs v0.16.0
 	github.com/hashicorp/terraform-plugin-framework v1.3.4
 	github.com/hashicorp/terraform-plugin-go v0.18.0
